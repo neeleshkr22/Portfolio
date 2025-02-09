@@ -49,51 +49,30 @@ export default function Projects() {
         trigger: container,
         start: "top top",
         end: `+=${window.innerHeight * (projects.length + 1)}`,
-        scrub: true, // Changed to true for smoother bi-directional scrolling
+        scrub: 1,
         pin: true,
         anticipatePin: 1,
+        // Add these to ensure consistent behavior in both directions
         fastScrollEnd: true,
-        preventOverlaps: true,
-        snap: {
-          snapTo: 1 / (projects.length + 1), // Snap to each project section
-          duration: { min: 0.2, max: 0.5 }, // Snap duration
-          ease: "power1.inOut"
-        }
+        preventOverlaps: true
       }
     });
 
-    // Title animation works in both directions
+    // Title moves right instead of left
     tl.to(title, {
       x: window.innerWidth,
       duration: projects.length,
-      ease: "none" // Changed to none for consistent bi-directional movement
+      ease: "power2.out"
     });
 
-    // Projects animation works in both directions
+    // Reverse the animation direction for projects
     projectElements.forEach((project, index) => {
-      tl.addLabel(`project-${index}`)
-        .to(
-          project,
-          {
-            opacity: 1,
-            scale: 1,
-            xPercent: 0,
-            duration: 1,
-            ease: "none"
-          },
-          `project-${index}`
-        )
-        .to(
-          project,
-          {
-            opacity: 0,
-            scale: 0.8,
-            xPercent: 100,
-            duration: 1,
-            ease: "none"
-          },
-          `project-${index}+=1`
-        );
+      tl.to(
+        project,
+        { opacity: 1, scale: 1, xPercent: 0, duration: 1 },
+        `+=0.5`
+      )
+        .to(project, { opacity: 0, scale: 0.8, xPercent: 100, duration: 1 }, `+=2`);
     });
 
   }, []);
