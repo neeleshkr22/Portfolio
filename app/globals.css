@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 39 100% 50%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 39 100% 50%;
+
+    --border: 39 60% 30%;
+    --input: 39 60% 30%;
+
+    --primary: 39 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 39 60% 30%;
+    --secondary-foreground: 39 100% 50%;
+
+    --accent: 39 60% 30%;
+    --accent-foreground: 39 100% 50%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 39 100% 50%;
+
+    --ring: 39 60% 30%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-black text-amber-500;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
+
+@layer components {
+  .terminal-line {
+    @apply relative pl-6;
+    display: block;
+  }
+
+  .terminal-line::before {
+    content: ">";
+    @apply absolute left-0 text-amber-500;
+  }
+
+  .terminal-item {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  a {
+    @apply hover:text-amber-300 transition-colors;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-banner {
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 5px 15px 0px rgba(255, 166, 0, 0.1);
+}
