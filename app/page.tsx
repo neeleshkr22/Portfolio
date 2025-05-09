@@ -4,8 +4,18 @@ import Link from "next/link"
 import { Terminal } from "@/components/terminal"
 import { Typewriter } from 'react-simple-typewriter'
 import { FaTwitter, FaDiscord, FaEnvelope, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa"
+import { useEffect, useState } from "react"
 
 export default function Home() {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      setTime(now.toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <main className="min-h-screen bg-black text-amber-500 font-mono p-4 md:p-8">
       <div className="max-w-5xl mx-auto">
@@ -49,7 +59,7 @@ export default function Home() {
           </p>
 
           <div className="mb-4">
-            <p className="terminal-line">// Running on  code — always online!</p>
+            <p className="terminal-line">Based in Delhi → <span className="font-bold">{time}</span></p>
           </div>
 
           <div className="mb-4">
