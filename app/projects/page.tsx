@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <main className="min-h-screen bg-black text-amber-500 font-mono p-4 md:p-8">
       <div className="max-w-5xl mx-auto">
-      <div className="border border-amber-700 mb-6 overflow-hidden"
+        <div className="border border-amber-700 mb-6 overflow-hidden"
           style={{
             boxShadow: "0 0 20px rgba(245, 158, 11, 0.7)", // amber-500 glow
           }}>
@@ -152,7 +152,7 @@ export default function Projects() {
             <div className="flex space-x-2 mb-4">
               <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#javascript</span>
               <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#discord-js</span>
-              
+
             </div>
             <div className="mb-4">
               <p className="text-gray-500 text-sm">90%</p>
@@ -166,6 +166,30 @@ export default function Projects() {
           </div>
 
           {/* Project 5 */}
+          <div className="bg-transparent border border-amber-300 rounded-lg p-6 mb-6 shadow-lg hover:shadow-xl transition-shadow">
+            <p className="text-yellow-400 font-bold mb-2">[5] Restify – REST Client</p>
+            <p className="text-gray-400 mb-4">
+              A Postman-like REST API client built for Warewe Consultancy as an assignment. Features request builder, response viewer, and PostgreSQL-based history.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#nextjs</span>
+              <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#mikroorm</span>
+              <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#postgresql</span>
+              <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#railway</span>
+              <span className="text-blue-400 text-sm font-medium py-1 px-3 rounded-full bg-gray-800">#typescript</span>
+            </div>
+            <div className="mb-4">
+              <p className="text-gray-500 text-sm">100%</p>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="bg-green-500 h-2 rounded-full" style={{ width: '100%' }}></div>
+              </div>
+            </div>
+            <p className="text-gray-500 text-sm">
+              <a href="https://github.com/neeleshkr22/Restify" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Code</a> {" "}| <a href="https://github.com/neeleshkr22/Discord-Bot" target="blank" className="text-blue-400 hover:underline">Star Project ⭐</a>
+            </p>
+          </div>
+
+          {/* Project 6 */}
           <div className="bg-transparent border border-amber-300 rounded-lg p-6 mb-6 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-yellow-400 font-bold mb-2">[5] Portfolio Website</p>
             <p className="text-gray-400 mb-4">A personal portfolio website built with Next.js and Tailwind CSS</p>
