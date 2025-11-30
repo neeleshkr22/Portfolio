@@ -36,7 +36,7 @@ export default function Home() {
 
         {/* Navigation */}
         <nav className="mb-8 border-b border-green-600 text-green-300 pb-2">
-          <ul className="flex flex-wrap gap-4 md:gap-8">
+          <ul className="flex flex-wrap gap-2 sm:gap-4 md:gap-8 text-sm sm:text-base">
             <li><Link href="/" className="hover:text-amber-300 transition-colors">~/home</Link></li>
             <li><Link href="/experience" className="hover:text-amber-300 transition-colors">~/experience</Link></li>
             <li><Link href="/projects" className="hover:text-amber-300 transition-colors">~/projects</Link></li>
@@ -84,30 +84,30 @@ export default function Home() {
             <p className="terminal-line">
               so ping me on any of the below if you would like to collaborate on something!
             </p>
-            <ul className="ml-4 mt-2 space-y-2">
-              <li className="terminal-line flex items-center gap-2">
-                <FaTwitter className="text-blue-400" />
-                <a href="https://x.com/neeleshkr22" target="_blank" className="text-blue-400 hover:underline">@neeleshkr22</a> : X (formerly Twitter)
+            <ul className="ml-2 sm:ml-4 mt-2 space-y-2 text-sm sm:text-base">
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaTwitter className="text-blue-400 flex-shrink-0" />
+                <a href="https://x.com/neeleshkr22" target="_blank" className="text-blue-400 hover:underline">@neeleshkr22</a> <span className="hidden sm:inline">: X (formerly Twitter)</span>
               </li>
-              <li className="terminal-line flex items-center gap-2">
-                <FaDiscord className="text-blue-400" />
-                <a href="https://discord.gg/R9bBk9vzda" className="text-blue-400 hover:underline">@i.neelesh</a> : Discord
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaDiscord className="text-blue-400 flex-shrink-0" />
+                <a href="https://discord.gg/R9bBk9vzda" className="text-blue-400 hover:underline">@i.neelesh</a> <span className="hidden sm:inline">: Discord</span>
               </li>
-              <li className="terminal-line flex items-center gap-2">
-                <FaEnvelope className="text-blue-400" />
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaEnvelope className="text-blue-400 flex-shrink-0" />
                 <a href="mailto:neeleshrana22@gmail.com" className="text-blue-400 hover:underline">mail</a>
               </li>
-              <li className="terminal-line flex items-center gap-2">
-                <FaLinkedin className="text-blue-400" />
-                <a href="https://www.linkedin.com/in/neelesh-kumar-rana-a7b903290/" className="text-blue-400 hover:underline">LinkedIn</a> : Connect with me
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaLinkedin className="text-blue-400 flex-shrink-0" />
+                <a href="https://www.linkedin.com/in/neelesh-kumar-rana-a7b903290/" className="text-blue-400 hover:underline">LinkedIn</a> <span className="hidden sm:inline">: Connect with me</span>
               </li>
-              <li className="terminal-line flex items-center gap-2">
-                <FaGithub className="text-blue-400" />
-                <a href="https://github.com/neeleshkr22" className="text-blue-400 hover:underline">GitHub</a> : Code playground
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaGithub className="text-blue-400 flex-shrink-0" />
+                <a href="https://github.com/neeleshkr22" className="text-blue-400 hover:underline">GitHub</a> <span className="hidden sm:inline">: Code playground</span>
               </li>
-              <li className="terminal-line flex items-center gap-2">
-                <FaFileAlt className="text-blue-400" />
-                <a href="/neelesh.pdf" className="text-blue-400 hover:underline" target="_blank">resume</a> : Here's my resume
+              <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
+                <FaFileAlt className="text-blue-400 flex-shrink-0" />
+                <a href="/neelesh.pdf" className="text-blue-400 hover:underline" target="_blank">resume</a> <span className="hidden sm:inline">: Here's my resume</span>
               </li>
             </ul>
           </div>

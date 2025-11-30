@@ -83,71 +83,65 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mb-4">
-            <p className="terminal-line">// Skills</p>
-            <ul className="ml-10 mt-2 grid grid-cols-2 gap-2">
-              <li className="mb-2">
-                <p>Python</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[90%] bg-red-500 h-full rounded-full"></div>
+          <div className="mb-8">
+            <p className="terminal-line">// my skills</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-4 sm:gap-y-6 mt-6">
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Python</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '90%' }}></div>
                 </div>
-              </li>
-              <li className="mb-2">
-                <p>React</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[92%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>Node.js</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[95%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>TypeScript</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[80%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>Prisma</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[79%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>PostgreSQL</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[80%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>Next JS</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[89%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>MongoDB</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[85%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>Machine Learning</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[75%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
-              <li className="mb-2">
-                <p>SQL</p>
-                <div className="w-full bg-gradient-to-r from-red-500 to-white h-2 rounded-full">
-                  <div className="w-[85%] bg-red-500 h-full rounded-full"></div>
-                </div>
-              </li>
+              </div>
               
-            </ul>
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Machine Learning</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '75%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Deep Learning (CNNs, YOLO, Unet, DeepSORT)</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '70%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Data Analysis (NumPy, Pandas)</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '85%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Power BI / Tableau</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '80%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">SQL</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '85%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Experiment Tracking (MLflow, DVC, Airflow)</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '60%' }}></div>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-orange-400 mb-2">Docker & Git</p>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '75%' }}></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mb-4">

@@ -69,15 +69,22 @@ export default function Experience() {
             <p className="terminal-line">// My professional journey</p>
           </div>
 
-          <div className="timeline mt-8">
+          <div className="relative pl-6 sm:pl-8 mt-8">
+            {/* Timeline vertical line */}
+            <div className="absolute left-3 sm:left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-gray-400" style={{ width: '3px' }}></div>
+
             {/* Timeline Item 1 */}
-            <div className="timeline-item slide-in" style={{ animationDelay: "0s" }}>
+            <div className="relative mb-12">
+              {/* Timeline dot */}
+              <div className="absolute -left-6 w-4 h-4 bg-orange-500 rounded-full border-2 border-black"></div>
+              
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="text-orange-400 font-bold text-lg">Vice President</h3>
-                <div className="flex items-center gap-2">
-                  <span className="badge badge-secondary"></span>
-                </div>
+                <span className="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-bold">
+                  LEADER
+                </span>
               </div>
+              
               <div className="flex flex-col md:flex-row md:items-center text-sm mb-3 text-orange-200">
                 <div className="flex items-center">
                   <LuBriefcase className="h-4 w-4 mr-1" />
@@ -94,9 +101,11 @@ export default function Experience() {
                   <span>On-Site</span>
                 </div>
               </div>
+
               <p className="mb-3">
                 Leading technical initiatives, organizing hackathons and coding events, mentoring juniors in DSA, MERN stack, and AI technologies. Spearheaded development of full-stack platforms for events and society management. Collaborated with team to bring industry-level project exposure to students through workshops and competitive programming contests.
               </p>
+
               <div className="flex flex-wrap gap-2">
                 {["Leadership", "React Js", "Node Js", "Express Js", "Tailwind", "Next Js", "Docker", "Zod", "Mongo", "Postgres", "Prisma", "Typescript", "C++"].map(skill => (
                   <span key={skill} className="px-2 py-1 bg-orange-900/50 text-orange-300 rounded text-xs">
@@ -105,17 +114,19 @@ export default function Experience() {
                 ))}
               </div>
             </div>
-            <br />
-            <br />
 
             {/* Timeline Item 2 */}
-            <div className="timeline-item slide-in" style={{ animationDelay: "0.2s" }}>
+            <div className="relative mb-12">
+              {/* Timeline dot */}
+              <div className="absolute -left-7 sm:-left-6 w-4 h-4 bg-orange-500 rounded-full border-2 border-black"></div>
+              
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="text-orange-400 font-bold text-lg">Data Analysis Trainee</h3>
-                <div className="flex items-center gap-2">
-                  <span className="badge badge-secondary">Internship</span>
-                </div>
+                <span className="inline-block px-3 py-1 bg-yellow-600 text-black text-xs rounded-full font-bold">
+                  INTERNSHIP
+                </span>
               </div>
+              
               <div className="flex flex-col md:flex-row md:items-center text-sm mb-3 text-orange-200">
                 <div className="flex items-center">
                   <LuBriefcase className="h-4 w-4 mr-1" />
@@ -132,12 +143,14 @@ export default function Experience() {
                   <span>Remote</span>
                 </div>
               </div>
+
               <p className="mb-3">
                 Executed a comprehensive data analysis project at Deloitte, demonstrating proficiency in extracting actionable
                 insights from complex datasets.
                 • Developed and implemented a data dashboard using Tableau to visualize key metrics, providing stakeholders with
                 clear and concise business intelligence.
               </p>
+
               <div className="flex flex-wrap gap-2">
                 {["Python",  "SQL", "Tableau"].map(skill => (
                   <span key={skill} className="px-2 py-1 bg-orange-900/50 text-orange-300 rounded text-xs">
@@ -146,49 +159,34 @@ export default function Experience() {
                 ))}
               </div>
             </div>
-            <br />
-            <br />
+          </div>
 
-            
-            
-
-            {/* Timeline Item 4 */}
-            {/* <div className="timeline-item slide-in" style={{ animationDelay: "0.6s" }}>
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="text-orange-400 font-bold text-lg">Machine Learning Researcher</h3>
-                <div className="flex items-center gap-2">
-                  <span className="badge badge-secondary">Research</span>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row md:items-center text-sm mb-3 text-orange-200">
-                <div className="flex items-center">
-                  <LuBriefcase className="h-4 w-4 mr-1" />
-                  <span>AI Research Lab</span>
-                </div>
-                <span className="hidden md:inline mx-2">•</span>
-                <div className="flex items-center">
-                  <LuCalendar className="h-4 w-4 mr-1" />
-                  <span>Mar. 2023–Aug. 2023</span>
-                </div>
-                <span className="hidden md:inline mx-2">•</span>
-                <div className="flex items-center">
-                  <LuMapPin className="h-4 w-4 mr-1" />
-                  <span>Remote</span>
-                </div>
-              </div>
-              <p className="mb-3">
-                Focused on the development of deep learning models to analyze large datasets, including the creation of neural networks for natural language processing and computer vision tasks.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["TensorFlow", "Keras", "NLP", "Deep Learning"].map(skill => (
-                  <span key={skill} className="px-2 py-1 bg-orange-900/50 text-orange-300 rounded text-xs">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div> */}
+          <hr className="w-full mb-4 mt-4 border-amber-300 " />
+          <div className="mb-4">
+            <p className="terminal-line">Want to know more? check my resume</p>
           </div>
         </Terminal>
+
+        {/* Scroll to top button */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-black rounded-full flex items-center justify-center transition-colors shadow-lg"
+          aria-label="Scroll to top"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
       </div>
     </main>
   );

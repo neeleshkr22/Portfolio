@@ -105,31 +105,31 @@ export default function Contact() {
 
           <div className="mb-6">
             <p className="terminal-line">// Social</p>
-            <ul className="ml-6 mt-2">
-              <li className="mb-2 flex items-center gap-2">
-                <FaTwitter className="text-blue-400" />{" "}
+            <ul className="ml-2 sm:ml-6 mt-2">
+              <li className="mb-2 flex items-center gap-2 text-sm sm:text-base break-all sm:break-normal">
+                <FaTwitter className="text-blue-400 flex-shrink-0" />{" "}
                 <a href="https://x.com/neeleshkr22" className="text-blue-400 hover:underline">
                   @neeleshkr22
                 </a>{" "}
-                : X (formerly Twitter)
+                <span className="hidden sm:inline">: X (formerly Twitter)</span>
               </li>
-              <li className="mb-2 flex items-center gap-2">
-                <FaDiscord className="text-blue-400" />{" "}
+              <li className="mb-2 flex items-center gap-2 text-sm sm:text-base break-all sm:break-normal">
+                <FaDiscord className="text-blue-400 flex-shrink-0" />{" "}
                 <a href="https://discord.gg/R9bBk9vzda" className="text-blue-400 hover:underline">
                   @i.neelesh
                 </a>{" "}
-                : Discord
+                <span className="hidden sm:inline">: Discord</span>
               </li>
               
-              <li className="mb-2 flex items-center gap-2">
-                <FaLinkedin className="text-blue-400" />{" "}
+              <li className="mb-2 flex items-center gap-2 text-sm sm:text-base break-all sm:break-normal">
+                <FaLinkedin className="text-blue-400 flex-shrink-0" />{" "}
                 <a href="https://www.linkedin.com/in/neelesh-kumar-rana-a7b903290/" className="text-blue-400 hover:underline">
                   LinkedIn
                 </a>{" "}
                 
               </li>
-              <li className="mb-2 flex items-center gap-2">
-                <FaGithub className="text-blue-400" />{" "}
+              <li className="mb-2 flex items-center gap-2 text-sm sm:text-base break-all sm:break-normal">
+                <FaGithub className="text-blue-400 flex-shrink-0" />{" "}
                 <a href="https://github.com/neeleshkr22" className="text-blue-400 hover:underline">
                   GitHub
                 </a>
@@ -142,9 +142,9 @@ export default function Contact() {
           </div>
 
           <div className="mb-4">
-          <form className="ml-6 mt-2 space-y-4" onSubmit={handleSubmit}>
+          <form className="ml-2 sm:ml-6 mt-2 space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block mb-1">
+              <label htmlFor="name" className="block mb-1 text-sm sm:text-base">
                 Name:
               </label>
               <input
@@ -153,12 +153,12 @@ export default function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full sm:w-2/3 md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block mb-1">
+              <label htmlFor="email" className="block mb-1 text-sm sm:text-base">
                 Email:
               </label>
               <input
@@ -167,12 +167,12 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full sm:w-2/3 md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block mb-1">
+              <label htmlFor="message" className="block mb-1 text-sm sm:text-base">
                 Message:
               </label>
               <textarea
@@ -181,13 +181,13 @@ export default function Contact() {
                 rows={5}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full sm:w-2/3 md:w-2/3 bg-gray-900 border border-amber-700 text-amber-500 p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-amber-500"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="bg-amber-700 hover:bg-amber-600 text-black font-bold py-2 px-4 transition-colors"
+              className="bg-amber-700 hover:bg-amber-600 text-black font-bold py-2 px-4 text-sm sm:text-base transition-colors"
             >
               Send Message
             </button>
