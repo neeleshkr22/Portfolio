@@ -93,7 +93,7 @@ export default function Experience() {
                 <span className="hidden md:inline mx-2">•</span>
                 <div className="flex items-center">
                   <LuCalendar className="h-4 w-4 mr-1" />
-                  <span>Sep. 2024–Present</span>
+                  <span>Sep. 2024–Oct 2025</span>
                 </div>
                 <span className="hidden md:inline mx-2">•</span>
                 <div className="flex items-center">
