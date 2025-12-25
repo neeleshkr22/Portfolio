@@ -121,6 +121,54 @@ export default function Experience() {
               <div className="absolute -left-7 sm:-left-6 w-4 h-4 bg-orange-500 rounded-full border-2 border-black"></div>
               
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 className="text-orange-400 font-bold text-lg">Software Engineering Intern</h3>
+                <span className="inline-block px-3 py-1 bg-yellow-600 text-black text-xs rounded-full font-bold">
+                  INTERNSHIP
+                </span>
+              </div>
+              
+              <div className="flex flex-col md:flex-row md:items-center text-sm mb-3 text-orange-200">
+                <div className="flex items-center">
+                  <LuBriefcase className="h-4 w-4 mr-1" />
+                  <span>Joget Inc. (Malaysia)</span>
+                </div>
+                <span className="hidden md:inline mx-2">•</span>
+                <div className="flex items-center">
+                  <LuCalendar className="h-4 w-4 mr-1" />
+                  <span>Sep. 2025–Dec. 2025</span>
+                </div>
+                <span className="hidden md:inline mx-2">•</span>
+                <div className="flex items-center">
+                  <LuMapPin className="h-4 w-4 mr-1" />
+                  <span>Remote</span>
+                </div>
+              </div>
+
+              <div className="mb-3 space-y-2">
+                <p>Worked on production-grade low-code platform used by enterprise clients; contributed features directly to deployed software.</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Designed and implemented a Vector Database utility to improve semantic search and context retrieval for AI-driven workflows.</li>
+                  <li>Developed an Auto Documentation Generator that converts recorded demo videos into structured technical documentation using LLM-based processing.</li>
+                  <li>Optimized existing internal tools, improving response time and reducing redundant API calls through better caching and query handling.</li>
+                  <li>Conducted comparative evaluation of Weaviate Vector DB against Elysia AI chat workflows to benchmark retrieval accuracy and agent responses.</li>
+                </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {["Vector DB", "Weaviate", "LLM", "AI Workflows", "API Optimization", "Low-Code Platform", "Semantic Search"].map(skill => (
+                  <span key={skill} className="px-2 py-1 bg-orange-900/50 text-orange-300 rounded text-xs">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Timeline Item 3 */}
+            <div className="relative mb-12">
+              {/* Timeline dot */}
+              <div className="absolute -left-7 sm:-left-6 w-4 h-4 bg-orange-500 rounded-full border-2 border-black"></div>
+              
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="text-orange-400 font-bold text-lg">Data Analysis Trainee</h3>
                 <span className="inline-block px-3 py-1 bg-yellow-600 text-black text-xs rounded-full font-bold">
                   INTERNSHIP
