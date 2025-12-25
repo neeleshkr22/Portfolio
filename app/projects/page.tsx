@@ -72,11 +72,96 @@ export default function Projects() {
           </div>
 
           <div className="space-y-8">
-            {/* Project 1 - InRoute */}
+            {/* Project 1 - AI Auto Documentation Tool */}
+            <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-orange-400 font-bold text-xl">AI Auto Documentation Tool</h3>
+                <a href="https://auto-documentation-tool-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
+              </div>
+              
+              <p className="text-orange-100 mb-4 leading-relaxed">
+                Production-ready tool that automatically generates comprehensive technical documentation from demo videos using AI-powered video processing. Features frame extraction, audio transcription, chapter segmentation, and can process videos up to 2 hours with automated timestamp generation and PDF export.
+              </p>
+
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-orange-200 text-sm">100%</span>
+                </div>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '100%' }}></div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["#python", "#fastapi", "#streamlit", "#openai", "#ffmpeg", "#llm"].map(tech => (
+                  <span key={tech} className="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-xs">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://auto-documentation-tool-frontend.onrender.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>🚀</span> Live Demo
+                </a>
+                <a href="https://github.com/neeleshkr22/auto-documentation-tool" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>👁</span> View Code
+                </a>
+                <a href="https://github.com/neeleshkr22/auto-documentation-tool" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>⭐</span> Star Project
+                </a>
+              </div>
+            </div>
+
+            {/* Project 2 - AI Criminal Sketch Matching System */}
+            <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-orange-400 font-bold text-xl">AI Criminal Sketch Matching System</h3>
+                <a href="https://github.com/neeleshkr22/AI-forensic-sketching" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
+              </div>
+              
+              <p className="text-orange-100 mb-4 leading-relaxed">
+                Full-stack application for generating realistic criminal sketches from text descriptions using Stable Diffusion and matching them against a database of 10,000+ records. Features CNN feature extraction (VGGFace), SVM classification with 85-90% accuracy, and pix2pix GAN enhancement improving accuracy by 15-20%. Includes dual sketch creation: AI-powered generator and drag-and-drop interface.
+              </p>
+
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-orange-200 text-sm">95%</span>
+                </div>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '95%' }}></div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["#python", "#flask", "#react", "#mongodb", "#tensorflow", "#opencv", "#cnn", "#svm", "#gan"].map(tech => (
+                  <span key={tech} className="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-xs">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://github.com/neeleshkr22/AI-forensic-sketching" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>👁</span> View Code
+                </a>
+                <a href="https://github.com/neeleshkr22/AI-forensic-sketching" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>⭐</span> Star Project
+                </a>
+              </div>
+            </div>
+
+            {/* Project 3 - InRoute */}
             <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-orange-400 font-bold text-xl">InRoute</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
+                <a href="https://github.com/neeleshkr22/InRoute" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
               </div>
               
               <p className="text-orange-100 mb-4 leading-relaxed">
@@ -100,21 +185,23 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4 text-sm">
-                <a href="https://github.com/neeleshkr22/InRoute" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://github.com/neeleshkr22/InRoute" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>👁</span> View Code
                 </a>
-                <a href="https://github.com/neeleshkr22/InRoute" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="https://github.com/neeleshkr22/InRoute" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>⭐</span> Star Project
                 </a>
               </div>
             </div>
 
-            {/* Project 2 - Project-Launcher */}
+            {/* Project 4 - Project-Launcher */}
             <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-orange-400 font-bold text-xl">Project-Launcher</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
+                <a href="https://github.com/neeleshkr22/Project-Launcher" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
               </div>
               
               <p className="text-orange-100 mb-4 leading-relaxed">
@@ -142,21 +229,23 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4 text-sm">
-                <a href="https://github.com/neeleshkr22/Project-Launcher" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://github.com/neeleshkr22/Project-Launcher" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>👁</span> View Code
                 </a>
-                <a href="https://github.com/neeleshkr22/Project-Launcher" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="https://github.com/neeleshkr22/Project-Launcher" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>⭐</span> Star Project
                 </a>
               </div>
             </div>
 
-            {/* Project 3 - Movie Finder */}
+            {/* Project 5 - Movie Finder */}
             <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-orange-400 font-bold text-xl">Movie Finder</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
+                <a href="https://movieeefinderr.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
               </div>
               
               <p className="text-orange-100 mb-4 leading-relaxed">
@@ -180,59 +269,26 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4 text-sm">
-                <a href="https://movieeefinderr.netlify.app/" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://movieeefinderr.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                  <span>🚀</span> Live Demo
+                </a>
+                <a href="https://github.com/neeleshkr22/Movie-Finder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>👁</span> View Code
                 </a>
-                <a href="https://github.com/neeleshkr22/Movie-Finder" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="https://github.com/neeleshkr22/Movie-Finder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>⭐</span> Star Project
                 </a>
               </div>
             </div>
 
-            {/* Project 4 - Discord Bot */}
-            <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-orange-400 font-bold text-xl">Discord Bot</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
-              </div>
-              
-              <p className="text-orange-100 mb-4 leading-relaxed">
-                Discord moderation bot with many features and helping server to keep protected and safe.
-              </p>
-
-              <div className="mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-orange-200 text-sm">90%</span>
-                </div>
-                <div className="w-full bg-gray-800 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '90%' }}></div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["#javascript", "#discord-js"].map(tech => (
-                  <span key={tech} className="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-4 text-sm">
-                <a href="https://github.com/neeleshkr22/Discord-Bot" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
-                  <span>👁</span> View Code
-                </a>
-                <a href="https://github.com/neeleshkr22/Discord-Bot" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
-                  <span>⭐</span> Star Project
-                </a>
-              </div>
-            </div>
-
-            {/* Project 5 - Restify */}
+            {/* Project 6 - Restify */}
             <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-orange-400 font-bold text-xl">Restify – REST Client</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
+                <a href="https://github.com/neeleshkr22/Restify" target="_blank" rel="noopener noreferrer">
+                  <HiExternalLink className="text-orange-400 w-5 h-5 hover:text-orange-300 transition-colors" />
+                </a>
               </div>
               
               <p className="text-orange-100 mb-4 leading-relaxed">
@@ -256,49 +312,11 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4 text-sm">
+              <div className="flex flex-wrap items-center gap-4 text-sm">
                 <a href="https://github.com/neeleshkr22/Restify" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>👁</span> View Code
                 </a>
-                <a href="https://github.com/neeleshkr22/Discord-Bot" target="blank" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
-                  <span>⭐</span> Star Project
-                </a>
-              </div>
-            </div>
-
-            {/* Project 6 - Portfolio Website */}
-            <div className="border border-orange-600 rounded-lg p-6 bg-black/50 hover:border-orange-400 transition-colors">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-orange-400 font-bold text-xl">Portfolio Website</h3>
-                <HiExternalLink className="text-orange-400 w-5 h-5" />
-              </div>
-              
-              <p className="text-orange-100 mb-4 leading-relaxed">
-                A personal portfolio website built with Next.js and Tailwind CSS
-              </p>
-
-              <div className="mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-orange-200 text-sm">100%</span>
-                </div>
-                <div className="w-full bg-gray-800 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-orange-500 to-white h-2 rounded-full transition-all duration-300" style={{ width: '100%' }}></div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["#nextjs", "#tailwindcss", "#javascript"].map(tech => (
-                  <span key={tech} className="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-4 text-sm">
-                <a href="#" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
-                  <span>👁</span> View Code
-                </a>
-                <a href="#" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="https://github.com/neeleshkr22/Restify" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors">
                   <span>⭐</span> Star Project
                 </a>
               </div>

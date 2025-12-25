@@ -107,7 +107,7 @@ export default function Home() {
               </li>
               <li className="terminal-line flex items-center gap-2 break-all sm:break-normal">
                 <FaFileAlt className="text-blue-400 flex-shrink-0" />
-                <a href="/neelesh.pdf" className="text-blue-400 hover:underline" target="_blank">resume</a> <span className="hidden sm:inline">: Here's my resume</span>
+                <a href="/Neelesh.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">resume</a> <span className="hidden sm:inline">: Here's my resume</span>
               </li>
             </ul>
           </div>
