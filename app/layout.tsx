@@ -5,8 +5,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Neelesh Kumar | Portfolio",
-  description: "Personal portfolio of Neelesh - Coder, Web Developer, and ML Enthusiast",
-    generator: 'v0.dev'
+  description: "Personal portfolio of Neelesh - Coder, Web Developer",
+  generator: 'neelesh',
+  icons: {
+    icon: '/Profilepic.jpg',
+    shortcut: '/Profilepic.jpg',
+    apple: '/Profilepic.jpg',
+  },
 }
 
 export default function RootLayout({

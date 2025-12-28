@@ -1,86 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Domine:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 39 100% 50%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 3%;
-    --card-foreground: 39 100% 50%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
 
-    --border: 39 60% 30%;
-    --input: 39 60% 30%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
 
-    --primary: 39 100% 50%;
+    --primary: 0 0% 100%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 39 60% 30%;
-    --secondary-foreground: 39 100% 50%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 39 60% 30%;
-    --accent-foreground: 39 100% 50%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 100% 50%;
-    --destructive-foreground: 39 100% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --ring: 39 60% 30%;
+    --ring: 0 0% 30%;
   }
+}
+
+/* Cause font class */
+.cause {
+  font-family: "Cause", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Saira font class */
+.saira {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Roboto Mono font class */
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 @layer base {
   body {
-    @apply bg-black text-amber-500;
-    font-family: "Courier New", Courier, monospace;
+    @apply bg-[#0a0a0a] text-white;
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .font-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 }
 
-@layer components {
-  .terminal-line {
-    @apply relative pl-6;
-    display: block;
-  }
-
-  .terminal-line::before {
-    content: ">";
-    @apply absolute left-0 text-amber-500;
-  }
-
-  .terminal-item {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  a {
-    @apply hover:text-amber-300 transition-colors;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.floating-banner {
-  animation: float 6s ease-in-out infinite;
-  box-shadow: 0 5px 15px 0px rgba(255, 166, 0, 0.1);
-}
