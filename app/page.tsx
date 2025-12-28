@@ -618,7 +618,7 @@ export default function Portfolio() {
                 Email Me
               </a>
               <a 
-                href="/Neelesh.pdf"
+                href="/neelesh.pdf"
                 target="_blank"
                 className="w-full sm:w-auto px-6 py-2.5 bg-[#1a1a1a] border border-gray-700 rounded-full text-sm text-gray-300 hover:text-white hover:border-gray-600 transition-colors font-mono flex items-center justify-center gap-2 group shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]"
               >
