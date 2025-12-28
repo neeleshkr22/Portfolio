@@ -2,7 +2,7 @@
 
 A sleek, modern portfolio website built with Next.js 16, featuring a clean single-page design with smooth animations. Showcases professional experience, projects, skills, and GitHub activity with a developer-focused aesthetic.
 
-## ✨ Features
+##  Features
 
 - **Modern Single-Page Design:** Clean, professional layout inspired by contemporary developer portfolios
 - **Responsive & Mobile-First:** Fully optimized for all screen sizes
@@ -14,7 +14,7 @@ A sleek, modern portfolio website built with Next.js 16, featuring a clean singl
 - **Skills Grid:** Visual representation of technical stack with icons
 - **Dark Theme:** Optimized for comfortable viewing
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - [Next.js 16](https://nextjs.org/) - React framework
 - [React 19](https://react.dev/) - UI library
@@ -24,7 +24,7 @@ A sleek, modern portfolio website built with Next.js 16, featuring a clean singl
 - [React Icons](https://react-icons.github.io/react-icons/) - Icon library
 - [GitHub Contributions API](https://github.com/grubersjoe/github-contributions-api) - Activity data
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 app/
@@ -48,7 +48,7 @@ public/
   Neelesh.pdf          # Resume
 ```
 
-## 📦 Setup & Installation
+##  Setup & Installation
 
 1. **Clone the repository:**
    ```sh
@@ -73,7 +73,7 @@ public/
 4. **Open in browser:**
    Visit [http://localhost:3000](http://localhost:3000)
 
-## 🛠️ Customization
+##  Customization
 
 ### Update Personal Info
 Edit the data arrays in `app/page.tsx`:
@@ -99,12 +99,12 @@ Update the GitHub username in the API call (line ~142 in `app/page.tsx`):
 fetch('https://github-contributions-api.jogruber.de/v4/YOUR_USERNAME?y=last')
 ```
 
-## 📱 Pages
+##  Pages
 
 - **/** - Main portfolio (About, Experience, Projects, Skills, GitHub Activity)
 - **/projects** - Detailed projects showcase
 
-## 🎨 Design Features
+##  Design Features
 
 - Japanese banner ("開発者" - Developer) with tooltip
 - Circular company logos for experience
@@ -114,7 +114,7 @@ fetch('https://github-contributions-api.jogruber.de/v4/YOUR_USERNAME?y=last')
 - Smooth scroll animations
 - Hover effects and transitions
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
