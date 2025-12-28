@@ -1,107 +1,118 @@
-# Terminal Portfolio
+# Modern Developer Portfolio
 
-A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. Inspired by terminal aesthetics, this portfolio showcases your experience, projects, skills, and contact information in a sleek, interactive UI.
-
-![Portfolio Screenshot](public/connect.jpg)
+A sleek, modern portfolio website built with Next.js 16, featuring a clean single-page design with smooth animations. Showcases professional experience, projects, skills, and GitHub activity with a developer-focused aesthetic.
 
 ## ✨ Features
 
-- **Terminal-inspired UI:** Unique design with animated cursor, timeline, and cards.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
-- **Experience Timeline:** Gradient timeline with role badges and bold highlights.
-- **Projects Showcase:** Card layout with gradient progress bars, custom buttons, and icons.
-- **Skills Section:** Clean grid layout, progress bars, and mobile-friendly arrangement.
-- **Contact Page:** Simple, accessible form and social links.
-- **Dark/Light Theme:** Toggle between themes for best viewing experience.
-- **Fast & Lean:** Unused assets and code removed for optimal performance.
+- **Modern Single-Page Design:** Clean, professional layout inspired by contemporary developer portfolios
+- **Responsive & Mobile-First:** Fully optimized for all screen sizes
+- **Real GitHub Activity:** Live contribution graph powered by GitHub API
+- **Smooth Animations:** Powered by Framer Motion for elegant transitions
+- **Custom Typography:** Domine serif for headings, Roboto Mono for code elements, Cause for body text
+- **Work Experience Timeline:** Expandable cards with detailed role descriptions
+- **Project Showcase:** Featured projects with live demos and GitHub links
+- **Skills Grid:** Visual representation of technical stack with icons
+- **Dark Theme:** Optimized for comfortable viewing
 
 ## 🚀 Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js 16](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon library
+- [GitHub Contributions API](https://github.com/grubersjoe/github-contributions-api) - Activity data
 
 ## 📁 Project Structure
 
 ```
 app/
-  globals.css
-  layout.tsx
-  page.tsx
-  about/
-  contact/
-  experience/
+  globals.css          # Global styles with custom fonts
+  layout.tsx           # Root layout with theme provider
+  page.tsx             # Main portfolio page
   projects/
+    page.tsx           # Dedicated projects page
 components/
-  cursor.tsx
-  terminal.tsx
-  theme-provider.tsx
-  ui/
-    button.tsx
-    input.tsx
-    form.tsx
-    toast.tsx
-    use-toast.ts
+  theme-provider.tsx   # Dark mode provider
 lib/
-  utils.ts
+  utils.ts             # Utility functions
 public/
-  connect.jpg
-  huma1.gif
-  messi.jpg
-  neelesh.pdf
-  oook.jpg
+  Profilepic.jpg       # Profile picture & favicon
+  joget.jpg            # Company logos
+  deloitte.jpg
+  hashtag.jpg
+  doctool.png          # Project images
   peace.jpg
+  inroute.png
+  Neelesh.pdf          # Resume
 ```
-
-## 🖥️ Pages
-
-- **Home:** Welcome and introduction
-- **About:** Skills and background
-- **Experience:** Timeline of roles and achievements
-- **Projects:** Portfolio of work with progress indicators
-- **Contact:** Get in touch via form or social links
 
 ## 📦 Setup & Installation
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/neeleshkr22/Portfolio22.git
-   cd Portfolio22
+   git clone https://github.com/neeleshkr22/terminal-portfolio.git
+   cd terminal-portfolio
    ```
+
 2. **Install dependencies:**
    ```sh
    pnpm install
    # or
    npm install
    ```
+
 3. **Run the development server:**
    ```sh
    pnpm dev
    # or
    npm run dev
    ```
+
 4. **Open in browser:**
    Visit [http://localhost:3000](http://localhost:3000)
 
 ## 🛠️ Customization
 
-- Update your experience, projects, and skills in the respective files under `app/`.
-- Replace images in `public/` as needed.
-- Tweak colors and gradients in Tailwind config or component styles.
+### Update Personal Info
+Edit the data arrays in `app/page.tsx`:
+- `experiences` - Work experience entries
+- `projects` - Portfolio projects
+- `skills` - Technical skills with icons
 
-## 📱 Responsive Design
+### Change Profile Picture
+Replace `public/Profilepic.jpg` - it's used for both profile image and favicon
 
-All pages are fully responsive. Tested on major devices and browsers.
+### Update Resume
+Replace `public/Neelesh.pdf` with your resume
 
-## 🧹 Code Quality
+### Modify Fonts
+Edit font imports in `app/globals.css`:
+- Domine (name/headings)
+- Roboto Mono (code/titles)
+- Cause (body text)
 
-- Unused files, images, and components have been removed for maintainability.
-- Follows best practices for React and Next.js projects.
+### GitHub Activity
+Update the GitHub username in the API call (line ~142 in `app/page.tsx`):
+```typescript
+fetch('https://github-contributions-api.jogruber.de/v4/YOUR_USERNAME?y=last')
+```
 
-## 🤝 Contributing
+## 📱 Pages
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+- **/** - Main portfolio (About, Experience, Projects, Skills, GitHub Activity)
+- **/projects** - Detailed projects showcase
+
+## 🎨 Design Features
+
+- Japanese banner ("開発者" - Developer) with tooltip
+- Circular company logos for experience
+- Live time display with seconds
+- Gradient contribution heatmap
+- Corner-decorated CTA section
+- Smooth scroll animations
+- Hover effects and transitions
 
 ## 📄 License
 
@@ -109,5 +120,5 @@ This project is licensed under the MIT License.
 
 ---
 
-> Crafted with ❤️ by [neeleshkr22](https://github.com/neeleshkr22)
-# Updated 12/26/2025 13:35:33
+> Built with 💻 by [Neelesh Kumar](https://github.com/neeleshkr22)  
+> Last Updated: December 2025
