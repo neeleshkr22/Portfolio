@@ -164,7 +164,7 @@ export default function Portfolio() {
   }
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white font-mono">
+    <main className="min-h-screen bg-[#0a0a0a] text-white" style={{ fontFamily: '"Saira", sans-serif' }}>
       {/* Navigation */}
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
@@ -281,13 +281,13 @@ export default function Portfolio() {
           {/* About */}
           <motion.div variants={fadeInUp} className="mb-10">
             <h2 className="text-base sm:text-lg font-bold text-white mb-3" style={{ fontFamily: '"Roboto Mono", monospace' }}>About</h2>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed font-mono">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed" style={{ fontFamily: '"Saira", sans-serif' }}>
               I turn ideas into production-ready applications. Whether it’s designing intuitive UIs, building solid backends, or shipping it. I enjoy owning the full development lifecycle. Focused on real-world problem solving, with an eye for clean design, performance, and reliability.
             </p>
           </motion.div>
 
           {/* Location & Time */}
-          <motion.div variants={fadeInUp} className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 text-sm sm:text-base text-gray-500 font-mono">
+          <motion.div variants={fadeInUp} className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 text-sm sm:text-base text-gray-500" style={{ fontFamily: '"Saira", sans-serif' }}>
             <div className="flex items-center gap-2">
               <FaMapMarkerAlt className="w-3 h-3" />
               <span>Delhi, India</span>
@@ -391,18 +391,18 @@ export default function Portfolio() {
                 className="border border-white/10 rounded-lg overflow-hidden bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
               >
                 <div className="flex flex-col sm:flex-row">
-                  <div className="sm:w-48 h-32 sm:h-auto overflow-hidden flex-shrink-0">
+                  <div className="sm:w-56 h-40 sm:h-36 overflow-hidden flex-shrink-0 rounded-l-lg flex items-center justify-center p-3">
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={200}
-                      height={120}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={224}
+                      height={144}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded"
                     />
                   </div>
                   <div className="p-5 flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-white font-semibold font-mono text-base sm:text-lg">{project.title}</h3>
+                      <h3 className="text-white font-semibold text-base sm:text-lg" style={{ fontFamily: '"Roboto Mono", monospace' }}>{project.title}</h3>
                       <div className="flex items-center gap-3">
                         {project.liveUrl && (
                           <a 
@@ -428,7 +428,7 @@ export default function Portfolio() {
                         )}
                       </div>
                     </div>
-                    <p className="text-gray-400 text-sm font-mono mb-3 leading-relaxed">
+                    <p className="text-gray-400 text-sm mb-3 leading-relaxed" style={{ fontFamily: '"Saira", sans-serif' }}>
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -509,16 +509,16 @@ export default function Portfolio() {
             </div>
 
             {/* Contribution grid - scrollable on mobile, full width on desktop */}
-            <div className="flex gap-[2px] overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0">
+            <div className="flex gap-[3px] overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0">
               {/* Weeks */}
               {contributions.days.length > 0 ? (
                 getWeeks().map((week, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0 sm:flex-1">
+                  <div key={weekIdx} className="flex flex-col gap-[3px] flex-shrink-0 sm:flex-1">
                     {week.map((day, dayIdx) => (
                       <div
                         key={dayIdx}
                         title={`${day.count} contributions on ${day.date}`}
-                        className={`w-[8px] h-[8px] sm:w-full sm:aspect-square sm:max-w-[12px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
+                        className={`w-[10px] h-[10px] sm:w-[11px] sm:h-[11px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
                           day.level === 0 ? 'bg-[#1a1a1a]' :
                           day.level === 1 ? 'bg-[#3a3a3a]' :
                           day.level === 2 ? 'bg-[#5a5a5a]' :
@@ -532,11 +532,11 @@ export default function Portfolio() {
               ) : (
                 // Placeholder while loading
                 Array.from({ length: 52 }).map((_, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0 sm:flex-1">
+                  <div key={weekIdx} className="flex flex-col gap-[3px] flex-shrink-0 sm:flex-1">
                     {Array.from({ length: 7 }).map((_, dayIdx) => (
                       <div
                         key={dayIdx}
-                        className="w-[8px] h-[8px] sm:w-full sm:aspect-square sm:max-w-[12px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
+                        className="w-[10px] h-[10px] sm:w-[11px] sm:h-[11px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
                       />
                     ))}
                   </div>
