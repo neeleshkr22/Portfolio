@@ -508,17 +508,17 @@ export default function Portfolio() {
               ))}
             </div>
 
-            {/* Contribution grid - now visible on mobile */}
-            <div className="flex gap-[2px] overflow-x-auto pb-2">
+            {/* Contribution grid - scrollable on mobile, full width on desktop */}
+            <div className="flex gap-[2px] overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0">
               {/* Weeks */}
               {contributions.days.length > 0 ? (
                 getWeeks().map((week, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0">
+                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0 sm:flex-1">
                     {week.map((day, dayIdx) => (
                       <div
                         key={dayIdx}
                         title={`${day.count} contributions on ${day.date}`}
-                        className={`w-[8px] h-[8px] sm:w-[12px] sm:h-[12px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
+                        className={`w-[8px] h-[8px] sm:w-full sm:aspect-square sm:max-w-[12px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
                           day.level === 0 ? 'bg-[#1a1a1a]' :
                           day.level === 1 ? 'bg-[#3a3a3a]' :
                           day.level === 2 ? 'bg-[#5a5a5a]' :
@@ -532,11 +532,11 @@ export default function Portfolio() {
               ) : (
                 // Placeholder while loading
                 Array.from({ length: 52 }).map((_, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0">
+                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0 sm:flex-1">
                     {Array.from({ length: 7 }).map((_, dayIdx) => (
                       <div
                         key={dayIdx}
-                        className="w-[8px] h-[8px] sm:w-[12px] sm:h-[12px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
+                        className="w-[8px] h-[8px] sm:w-full sm:aspect-square sm:max-w-[12px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
                       />
                     ))}
                   </div>
