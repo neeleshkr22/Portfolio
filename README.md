@@ -52,7 +52,7 @@ public/
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/neeleshkr22/terminal-portfolio.git
+   git clone https://github.com/neeleshkr22/Portfolio.git
    cd terminal-portfolio
    ```
 
