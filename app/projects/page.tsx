@@ -32,7 +32,7 @@ export default function Projects() {
     {
       title: "AI Criminal Sketch Matching",
       description: "Full-stack application for generating realistic criminal sketches from text descriptions using Stable Diffusion and matching them against 10,000+ records with CNN & SVM.",
-      image: "/peace.jpg",
+      image: "/sketch.png",
       tech: ["Python", "Flask", "React", "TensorFlow", "OpenCV"],
       github: "https://github.com/neeleshkr22/AI-forensic-sketching"
     },

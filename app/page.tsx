@@ -80,7 +80,7 @@ const projects = [
     id: 2,
     title: "AI Criminal Sketch Matching",
     description: "Full-stack application for generating realistic criminal sketches using Stable Diffusion and matching against 10,000+ records with CNN & SVM.",
-    image: "/peace.jpg",
+    image: "/sketch.png",
     tags: ["Python", "Flask", "React", "TensorFlow", "OpenCV"],
     githubUrl: "https://github.com/neeleshkr22/AI-forensic-sketching"
   },
@@ -508,17 +508,17 @@ export default function Portfolio() {
               ))}
             </div>
 
-            {/* Contribution grid - hidden on mobile */}
-            <div className="hidden sm:flex gap-[2px]">
+            {/* Contribution grid - now visible on mobile */}
+            <div className="flex gap-[2px] overflow-x-auto pb-2">
               {/* Weeks */}
               {contributions.days.length > 0 ? (
                 getWeeks().map((week, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-1">
+                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0">
                     {week.map((day, dayIdx) => (
                       <div
                         key={dayIdx}
                         title={`${day.count} contributions on ${day.date}`}
-                        className={`aspect-square w-full max-w-[12px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
+                        className={`w-[8px] h-[8px] sm:w-[12px] sm:h-[12px] rounded-[2px] cursor-pointer transition-all hover:ring-1 hover:ring-white/50 ${
                           day.level === 0 ? 'bg-[#1a1a1a]' :
                           day.level === 1 ? 'bg-[#3a3a3a]' :
                           day.level === 2 ? 'bg-[#5a5a5a]' :
@@ -532,24 +532,16 @@ export default function Portfolio() {
               ) : (
                 // Placeholder while loading
                 Array.from({ length: 52 }).map((_, weekIdx) => (
-                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-1">
+                  <div key={weekIdx} className="flex flex-col gap-[2px] flex-shrink-0">
                     {Array.from({ length: 7 }).map((_, dayIdx) => (
                       <div
                         key={dayIdx}
-                        className="aspect-square w-full max-w-[12px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
+                        className="w-[8px] h-[8px] sm:w-[12px] sm:h-[12px] rounded-[2px] bg-[#1a1a1a] animate-pulse"
                       />
                     ))}
                   </div>
                 ))
               )}
-            </div>
-
-            {/* Mobile GitHub stats card */}
-            <div className="sm:hidden border border-white/10 rounded-lg p-4 bg-white/[0.02] text-center">
-              <p className="text-2xl font-bold text-white mb-1">
-                {contributions.total > 0 ? contributions.total : '...'}
-              </p>
-              <p className="text-xs text-gray-400">contributions in the last year</p>
             </div>
 
             {/* Legend and stats */}
